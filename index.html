@@ -1,11 +1,717 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sajid Dashti</title>
-</head>
-<body>
-    <h1>Coming Soon...</h1>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mir Sajid Ishaq Dashti | Curriculum Vitae</title>
+    <meta
+      name="description"
+      content="Public curriculum vitae for Mir Sajid Ishaq Dashti, businessman, philanthropist, community leader and tribal notable from Gwadar, Balochistan."
+    />
+    <style>
+      :root {
+        --ink: #111827;
+        --navy: #14243b;
+        --muted: #66717e;
+        --gold: #9a7133;
+        --line: #d8d1c4;
+        --paper: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: #ffffff;
+        color: var(--ink);
+        font-family: "Segoe UI", Aptos, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+        line-height: 1.52;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site {
+        width: min(1180px, calc(100% - 36px));
+        margin: 24px auto 44px;
+        border: 1px solid #e0e4e8;
+        background: var(--paper);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 34px;
+        align-items: center;
+        padding: 54px 58px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .kicker,
+      .section-label {
+        margin: 0 0 12px;
+        color: var(--gold);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        font-size: clamp(40px, 5vw, 66px);
+        line-height: 0.98;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-size: clamp(28px, 3.2vw, 38px);
+        line-height: 1.1;
+      }
+
+      h3 {
+        margin: 0 0 8px;
+        color: var(--navy);
+        font-size: 17px;
+      }
+
+      .dek {
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .standfirst {
+        max-width: 760px;
+        margin: 34px 0 0;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 23px;
+        line-height: 1.45;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        margin-top: 30px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .contact-button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+      }
+
+      .contact-button:hover {
+        color: var(--navy);
+      }
+
+      .hero-photo {
+        border: 1px solid #d8dde3;
+        padding: 12px;
+      }
+
+      .hero-photo img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .section,
+      .story,
+      .row-feature,
+      .leadership,
+      .sports,
+      .business,
+      .placeholder {
+        border-bottom: 1px solid var(--line);
+        padding: 52px 58px;
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+        gap: 42px;
+      }
+
+      p {
+        margin: 0 0 12px;
+        color: #303841;
+        font-size: 15px;
+      }
+
+      .profile-grid p:first-of-type {
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      .strengths {
+        border-left: 1px solid var(--line);
+        padding-left: 28px;
+      }
+
+      .strengths ul,
+      .business ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .strengths li {
+        padding: 0 0 10px;
+        border-bottom: 1px solid var(--line);
+        color: var(--navy);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .strengths li + li {
+        margin-top: 10px;
+      }
+
+      .impact {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .metric {
+        min-height: 156px;
+        padding: 26px;
+        border-right: 1px solid var(--line);
+      }
+
+      .metric:last-child {
+        border-right: 0;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .peace,
+      .story,
+      .row-feature,
+      .leadership,
+      .sports,
+      .business {
+        display: grid;
+        gap: 34px;
+      }
+
+      .peace {
+        grid-template-columns: minmax(320px, 0.75fr) minmax(0, 1.25fr);
+        align-items: center;
+      }
+
+      .peace-copy {
+        border-left: 4px solid var(--gold);
+        padding-left: 22px;
+      }
+
+      .story {
+        grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+      }
+
+      .row-feature {
+        grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+      }
+
+      .leadership {
+        grid-template-columns: 0.55fr 1fr;
+      }
+
+      .sports,
+      .business {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .business-single {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .photo-pair,
+      .cards,
+      .placeholder-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      figure img {
+        width: 100%;
+        height: 292px;
+        border: 1px solid #cfc6b8;
+        object-fit: cover;
+      }
+
+      .compact img {
+        height: 190px;
+      }
+
+      .peace img {
+        width: 100%;
+        height: 360px;
+        border: 1px solid #cfc6b8;
+        object-fit: cover;
+      }
+
+      .sports img {
+        height: 250px;
+      }
+
+      figcaption {
+        margin-top: 8px;
+        padding-top: 6px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.35;
+      }
+
+      .cards {
+        gap: 16px;
+      }
+
+      .cards article {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-top: 3px solid var(--navy);
+      }
+
+      .business li {
+        margin-bottom: 12px;
+        padding-left: 18px;
+        position: relative;
+        color: #303841;
+        font-size: 15px;
+      }
+
+      .business li::before {
+        content: "";
+        position: absolute;
+        top: 0.72em;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--navy);
+      }
+
+      .placeholder-card > div {
+        display: grid;
+        min-height: 230px;
+        place-items: center;
+        padding: 24px;
+        border: 1px solid #cfc6b8;
+        background:
+          linear-gradient(135deg, rgba(154, 113, 51, 0.08) 25%, transparent 25%) 0 0 / 18px 18px,
+          #ffffff;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .placeholder-card strong,
+      .placeholder-card span {
+        display: block;
+      }
+
+      .placeholder-card strong {
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .placeholder-card span {
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .jiwani-gallery img {
+        height: 340px;
+        object-fit: contain;
+        background: #f5f3ef;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 24px 58px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      @media (max-width: 900px) {
+        .site {
+          width: 100%;
+          margin: 0;
+          border: 0;
+        }
+
+        .hero,
+        .section,
+        .story,
+        .row-feature,
+        .leadership,
+        .sports,
+        .business,
+        .placeholder {
+          grid-template-columns: 1fr;
+          padding: 34px 22px;
+        }
+
+        .hero h1 {
+          font-size: 42px;
+        }
+
+        .profile-grid,
+        .peace,
+        .photo-pair,
+        .cards,
+        .placeholder-grid,
+        .impact {
+          grid-template-columns: 1fr;
+        }
+
+        .strengths {
+          border-left: 0;
+          padding-left: 0;
+        }
+
+        .metric {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .hero-photo {
+          max-width: 280px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="site">
+      <section class="hero">
+        <div>
+          <p class="kicker">Curriculum Vitae</p>
+          <h1>Mir Sajid Ishaq Dashti</h1>
+          <p class="dek">Businessman | Philanthropist | Community Leader and Tribal Notable</p>
+          <p class="standfirst">
+            A Gwadar-based businessman and community leader with long-standing work across
+            humanitarian relief, healthcare, education, youth development, employment support
+            and international business exposure.
+          </p>
+          <div class="meta">
+            <span>Gwadar, Balochistan, Pakistan</span>
+            <span>mirsajiddashti.com</span>
+            <button
+              class="contact-button"
+              type="button"
+              data-user="info"
+              data-domain="mirsajiddashti"
+              data-tld="com"
+              aria-label="Email the office"
+            >
+              info [at] mirsajiddashti [dot] com
+            </button>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/photos/profile-pic.jpeg" alt="Portrait of Mir Sajid Ishaq Dashti" />
+        </div>
+      </section>
+
+      <section class="section profile-grid">
+        <article>
+          <p class="section-label">Profile</p>
+          <p>
+            A respected businessman, philanthropist, community leader and tribal notable from
+            Gwadar, Balochistan, with long-standing involvement in public welfare,
+            humanitarian relief, education support, healthcare initiatives and community
+            development.
+          </p>
+          <p>
+            His work combines community leadership, business experience, international exposure
+            and a continued commitment to supporting vulnerable families, students, healthcare
+            access, youth activities and employment opportunities.
+          </p>
+        </article>
+        <aside class="strengths">
+          <p class="section-label">Core Strengths</p>
+          <ul>
+            <li>Community Leadership</li>
+            <li>Business & Entrepreneurship</li>
+            <li>Philanthropy & Social Welfare</li>
+            <li>Humanitarian Relief</li>
+            <li>Public Service & Civic Engagement</li>
+            <li>Education & Healthcare Support</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="impact" aria-label="Impact highlights">
+        <div class="metric">
+          <strong>5,000</strong>
+          <span>flood victims supported through ration relief across Mekran and Bela</span>
+        </div>
+        <div class="metric">
+          <strong>15,000+</strong>
+          <span>participants reported in the Pakistan Peace Rally, Gwadar peace initiative</span>
+        </div>
+        <div class="metric">
+          <strong>400</strong>
+          <span>students supported through school and madrassa initiatives</span>
+        </div>
+        <div class="metric">
+          <strong>200</strong>
+          <span>individuals facilitated for employment opportunities in Qatar</span>
+        </div>
+      </section>
+
+      <section class="section peace">
+        <div class="peace-copy">
+          <p class="section-label">Peace Initiative</p>
+          <h2>Pakistan Peace Rally, Gwadar</h2>
+          <p>
+            Associated with a major peace and social cohesion initiative in Gwadar, with
+            reported participation of approximately 15,000-20,000 people. The rally reflected
+            local mobilization, public engagement and a message of stability and unity for
+            the wider community.
+          </p>
+        </div>
+        <figure>
+          <img src="assets/photos/peace-rally.jpg" alt="Pakistan Peace Rally in Gwadar" />
+          <figcaption>Pakistan Peace Rally in Gwadar, a major community gathering associated with peace and social cohesion.</figcaption>
+        </figure>
+      </section>
+
+      <section class="story">
+        <div>
+          <p class="section-label">Humanitarian Work</p>
+          <h2>Flood Relief and Ration Distribution Across Balochistan</h2>
+          <p>
+            Personally funded and led ration distribution for approximately 5,000 flood victims
+            across Mekran and Bela, including 15-day ration packages for 1,000 flood-affected
+            people.
+          </p>
+          <p>
+            The distribution effort was prominently supported by family members Mir Israr
+            Ishaq Dashti, Yousaf Dashti, Zafer Eassa Dashti and Faraz Dashti, who helped
+            deliver supplies directly to affected communities.
+          </p>
+        </div>
+        <div class="photo-pair">
+          <figure>
+            <img src="assets/photos/flood_relief_efforts1.jpeg" alt="Ration distribution from a relief truck" />
+            <figcaption>Relief supplies being distributed from a truck during flood-ration efforts in Balochistan.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/flood_relief_efforts6.jpeg" alt="Direct ration handover to affected families" />
+            <figcaption>Family-led relief teams hand over ration packages directly to flood-affected residents.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="row-feature">
+        <div>
+          <p class="section-label">Healthcare</p>
+          <h2>Founder, Coast Medical Center</h2>
+          <p>
+            Founded Coast Medical Center in Gwadar and supported healthcare welfare initiatives,
+            including medical support connected with Jiwani and improved community access to
+            healthcare services for local families.
+          </p>
+        </div>
+        <div class="photo-pair compact">
+          <figure>
+            <img src="assets/photos/hospital6.jpeg" alt="Coast Medical Center sign in Gwadar" />
+            <figcaption>Coast Medical Center identity signage for the Gwadar healthcare facility.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/hospital5.jpeg" alt="Coast Medical Center ambulance vehicle in Gwadar" />
+            <figcaption>Coast Medical Center ambulance vehicle supporting local healthcare access in Gwadar.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="row-feature">
+        <div>
+          <p class="section-label">Education</p>
+          <h2>School, Madrassa and Student Support</h2>
+          <p>
+            Supported educational and religious institutions serving approximately 400 students,
+            helping provide modern scientific education alongside religious education. Supported
+            Jamia Al-Uloom Al-Islamia Koh Bun, a madrassa and school located in Koh Bun Ward,
+            Gwadar.
+          </p>
+          <p>
+            Personally funded shade and shelter construction for students at a school in the
+            Kapkapaar area of Bal Nigwar, Dasht.
+          </p>
+        </div>
+        <div class="photo-pair compact">
+          <figure>
+            <img src="assets/photos/school-heat-shelter.jpeg" alt="Students seated under shade shelter" />
+            <figcaption>Students seated under the shade and shelter arranged for the school in Bal Nigwar, Dasht.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/school-heat-shelter-2.jpeg" alt="Students in a learning setting" />
+            <figcaption>Students pictured in a school and madrassa learning setting supported by the initiative.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="leadership">
+        <div>
+          <p class="section-label">Public Service</p>
+          <h2>Leadership, Community Advancement and Youth Engagement</h2>
+        </div>
+        <div class="cards">
+          <article>
+            <h3>Community Leadership and Tribal Standing</h3>
+            <p>Recognized as a tribal notable and philanthropist involved in public affairs and welfare coordination.</p>
+          </article>
+          <article>
+            <h3>Mir Sajid Dashti Cricket Club</h3>
+            <p>Established and continued to support MSD CC to encourage young people toward disciplined, healthy sports activities.</p>
+          </article>
+          <article>
+            <h3>Employment Support - Qatar</h3>
+            <p>Facilitated employment opportunities in Qatar for approximately 200 individuals from Gwadar.</p>
+          </article>
+          <article>
+            <h3>International Exposure</h3>
+            <p>Business, social and community-related exposure across Pakistan, South Africa, the United States and the Gulf region.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sports">
+        <figure>
+          <img src="assets/photos/cricket-team3.jpeg" alt="MSD CC team group photo" />
+          <figcaption>Mir Sajid Dashti Cricket Club players pictured as part of the youth sports initiative.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/photos/cricket-team12.jpeg" alt="Cricket trophy presentation" />
+          <figcaption>Trophy and award presentation connected with Mir Sajid Dashti Cricket Club youth activities.</figcaption>
+        </figure>
+      </section>
+
+      <section class="business business-single">
+        <article>
+          <p class="section-label">Business Exposure</p>
+          <h2>Business & International Exposure</h2>
+          <ul>
+            <li><strong>HFS Steel Factory - South Africa:</strong> Business involvement in the steel sector.</li>
+            <li><strong>SJD Rent A Car - United States:</strong> Business involvement in transport/rent-a-car services.</li>
+            <li><strong>Property / Landlord Interests:</strong> Property and landholding interests connected with Balochistan.</li>
+            <li><strong>International Exposure:</strong> Business, social and community-related exposure across Pakistan, South Africa, the United States and the Gulf region.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="placeholder">
+        <p class="section-label">Jiwani Medical Center</p>
+        <h2>Jiwani Medical Center, Gwadar</h2>
+        <p>
+          The Jiwani Medical Center initiative is connected with the Sheikh Rashid Bin
+          Mohammed Bin Rashid Al Maktoum Hospital in coastal Balochistan, intended to
+          improve healthcare access for communities in and around Jiwani, Gwadar.
+        </p>
+        <p>
+          Supporting photographs documenting the medical center building and official site
+          signage for the healthcare initiative serving communities in coastal Balochistan.
+        </p>
+        <div class="photo-pair jiwani-gallery">
+          <figure>
+            <img src="assets/photos/jiwani-hospital-2.jpeg" alt="Jiwani Medical Center exterior" />
+            <figcaption>Jiwani Medical Center exterior documented as part of the healthcare initiative for coastal Balochistan.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/jiwani-hospital-1.jpeg" alt="Official signboard for Jiwani Medical Center" />
+            <figcaption>Official project signboard displayed at the Jiwani Medical Center site.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Mir Sajid Ishaq Dashti | Curriculum Vitae</span>
+        <button
+          class="contact-button"
+          type="button"
+          data-user="info"
+          data-domain="mirsajiddashti"
+          data-tld="com"
+        >
+          Email office
+        </button>
+      </footer>
+    </main>
+    <script>
+      (() => {
+        const buttons = document.querySelectorAll(".contact-button");
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const address = [button.dataset.user, "@", button.dataset.domain, ".", button.dataset.tld].join("");
+            window.location.href = `mailto:${address}`;
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>
